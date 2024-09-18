@@ -2,11 +2,22 @@
   "name": "api-rest-nodejs",
   "version": "1.0.0",
   "main": "index.js",
+  "engines": {
+    "node": " >= 20"
+  },
   "scripts": {
     "dev": "tsx watch src/server.ts",
     "knex": "node --no-warnings --import tsx ./node_modules/knex/bin/cli.js",
     "test": "vitest",
     "build": "tsup src --out-dir build"
+  },
+  "dependencies": {
+    "@fastify/cookie": "^9.4.0",
+    "dotenv": "^16.4.5",
+    "fastify": "^4.28.1",
+    "knex": "^3.1.0",
+    "pg": "^8.13.0",
+    "zod": "^3.23.8"
   },
   "keywords": [],
   "author": "",
@@ -19,14 +30,7 @@
     "tsup": "^8.3.0",
     "tsx": "^4.19.0",
     "typescript": "^5.5.4",
-    "vitest": "^2.0.5"
-  },
-  "dependencies": {
-    "@fastify/cookie": "^9.4.0",
-    "dotenv": "^16.4.5",
-    "fastify": "^4.28.1",
-    "knex": "^3.1.0",
-    "sqlite3": "^5.1.7",
-    "zod": "^3.23.8"
+    "vitest": "^2.0.5",
+    "sqlite3": "^5.1.7"
   }
 }
